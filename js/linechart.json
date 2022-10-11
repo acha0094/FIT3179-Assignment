@@ -1,9 +1,7 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "title": {
-        "text": "Malaysia COVID-19 Daily New Cases",
-        "align": "center",
-        "anchor": "middle"
+    "config": {
+        "background": "rgb(253, 239, 223)"
     },
     "data": {"url": "data/epidemic/cases_state.csv"},
     "vconcat": [
@@ -39,7 +37,7 @@
                 {
                     "mark": {
                         "type": "text",
-                        "align": "right",
+                        "align": "center",
                         "baseline": "middle",
                         "dx": -12,
                         "font": "sans-serif",
@@ -47,10 +45,10 @@
                         "fontStyle": "italic"
                     },
                     "encoding": {
-                        "text": {"value": "Highest Number of New Cases in Selangor: 11692"},
+                        "text": {"value": ["Massive Spike in Cases Between", "July to November of 2021 &", "February to May 2022"]},
                         "color": {"value": "black"},
-                        "x": {"value": 650},
-                        "y": {"datum": 11600, "type": "quantitative"}
+                        "x": {"value": 550},
+                        "y": {"datum": 10000, "type": "quantitative"}
                     }
                 },
                 {
@@ -116,7 +114,10 @@
                         },
                         "color": {
                             "field": "state",
-                            "type": "nominal"
+                            "type": "nominal",
+                            "legend": {
+                                "title": "States"
+                            }
                         },
                         "opacity": {
                             "condition": {

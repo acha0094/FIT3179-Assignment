@@ -1,12 +1,10 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "title": {
-        "text": "Malaysia COVID-19 Cumulative Vaccination Shots",
-        "align": "center",
-        "anchor": "middle"
-    },
     "width": 800,
     "height": 400,
+    "config": {
+        "background": "rgb(253, 239, 223)"
+    },
     "data": {"url": "data/vaccination/vax_state.csv"},
     "layer": [
         {
@@ -36,9 +34,16 @@
                     "title": "Number of Vaccination Doses Administered"
                 },
                 "opacity": {
-                    "value": 0.7
+                    "value": 0.6
                 },
-                "color": {"datum": "1st Partial Dose", "type": "nominal", "scale": {"range": ["blue", "pink", "yellow"]}}
+                "color": {
+                    "datum": "1st Partial Dose", 
+                    "type": "nominal", 
+                    "scale": {"range": ["pink", "orange", "blue"]},
+                    "legend": {
+                        "title": "Vaccination Dose"
+                    }
+                }
             }
         },
         {
@@ -67,7 +72,7 @@
                     "title": ""
                 },
                 "opacity": {
-                    "value": 0.8
+                    "value": 0.4
                 },
                 "color": {"datum": "2nd Full Dose", "type": "nominal"}
             }
@@ -116,14 +121,14 @@
             "encoding": {
                 "text": {"value": "2 Weeks Interval Between 1st & 2nd Dose"},
                 "color": {"value": "black"},
-                "x": {"value": 25},
-                "y": {"datum": 18000000, "type": "quantitative"}
+                "x": {"value": 20},
+                "y": {"datum": 17000000, "type": "quantitative"}
             }
         },
         {
             "mark": "rule",
             "encoding": {
-                "x": {"value": 278},
+                "x": {"value": 279},
                 "x2": {"value": 319},
                 "y": {"datum": 22000000},
                 "y2": {"datum": 22000000},
