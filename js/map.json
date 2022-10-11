@@ -121,6 +121,132 @@
                     "value": 0.25
                 }
             }
+        },
+        {
+            "data": {"values": [{}]},
+            "mark": {
+                "type": "text",
+                "align": "center",
+                "baseline": "middle",
+                "dx": -12,
+                "font": "sans-serif",
+                "fontSize": 12,
+                "fontStyle": "italic"
+            },
+            "encoding": {
+                "longitude": {"datum": 111, "type": "quantitative"},
+                "latitude": {"datum": 2.5, "type": "quantitative"},
+                "text": {"value": ["Sarawak"]},
+                "color": {"value": "black"}
+            }
+        },
+        {
+            "data": {"values": [{}]},
+            "mark": {
+                "type": "text",
+                "align": "center",
+                "baseline": "middle",
+                "dx": -12,
+                "font": "sans-serif",
+                "fontSize": 12,
+                "fontStyle": "italic"
+            },
+            "encoding": {
+                "longitude": {"datum": 114.5, "type": "quantitative"},
+                "latitude": {"datum": 5.3, "type": "quantitative"},
+                "text": {"value": ["Sabah"]},
+                "color": {"value": "black"}
+            }
+        },
+        {
+            "data": {"values": [{}]},
+            "mark": {
+                "type": "text",
+                "align": "center",
+                "baseline": "middle",
+                "dx": -12,
+                "font": "sans-serif",
+                "fontSize": 12,
+                "fontStyle": "italic"
+            },
+            "encoding": {
+                "longitude": {"datum": 102.7, "type": "quantitative"},
+                "latitude": {"datum": 3.8, "type": "quantitative"},
+                "text": {"value": ["Pahang"]},
+                "color": {"value": "black"}
+            }
+        },
+        {
+            "data": {"values": [{}]},
+            "mark": {
+                "type": "text",
+                "align": "center",
+                "baseline": "middle",
+                "dx": -12,
+                "font": "sans-serif",
+                "fontSize": 12,
+                "fontStyle": "italic"
+            },
+            "encoding": {
+                "longitude": {"datum": 103.6, "type": "quantitative"},
+                "latitude": {"datum": 2.1, "type": "quantitative"},
+                "text": {"value": ["Johor"]},
+                "color": {"value": "black"}
+            }
+        },
+        {
+            "data": {"values": [{}]},
+            "mark": {
+                "type": "text",
+                "align": "center",
+                "baseline": "middle",
+                "dx": -12,
+                "font": "sans-serif",
+                "fontSize": 12,
+                "fontStyle": "italic"
+            },
+            "encoding": {
+                "longitude": {"datum": 101.25, "type": "quantitative"},
+                "latitude": {"datum": 5, "type": "quantitative"},
+                "text": {"value": ["Perak"]},
+                "color": {"value": "black"}
+            }
+        },
+        {
+            "data": {"values": [{}]},
+            "mark": {
+                "type": "text",
+                "align": "center",
+                "baseline": "middle",
+                "dx": -12,
+                "font": "sans-serif",
+                "fontSize": 12,
+                "fontStyle": "italic"
+            },
+            "encoding": {
+                "longitude": {"datum": 101.4, "type": "quantitative"},
+                "latitude": {"datum": 2, "type": "quantitative"},
+                "text": {"value": ["Malacca Strait"]},
+                "color": {"value": "black"}
+            }
+        },
+        {
+            "data": {"values": [{}]},
+            "mark": {
+                "type": "text",
+                "align": "center",
+                "baseline": "middle",
+                "dx": -12,
+                "font": "sans-serif",
+                "fontSize": 12,
+                "fontStyle": "italic"
+            },
+            "encoding": {
+                "longitude": {"datum": 105.8, "type": "quantitative"},
+                "latitude": {"datum": 1.5, "type": "quantitative"},
+                "text": {"value": ["Riau Archipelago"]},
+                "color": {"value": "black"}
+            }
         }
     ]
 }
