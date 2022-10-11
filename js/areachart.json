@@ -1,0 +1,263 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "title": {
+        "text": "Malaysia COVID-19 Cumulative Vaccination Shots",
+        "align": "center",
+        "anchor": "middle"
+    },
+    "width": 800,
+    "height": 400,
+    "data": {"url": "data/vaccination/vax_state.csv"},
+    "layer": [
+        {
+            "transform": [
+                {
+                    "aggregate": [
+                        {
+                            "op": "sum",
+                            "field": "cumul_partial",
+                            "as": "sum_cumul_partial"
+                        }
+                    ],
+                    "groupby": ["date"]
+                }
+            ],
+            "mark": "area",
+            "encoding": {
+                "x": {
+                    "field": "date", 
+                    "type": "temporal", 
+                    "title": "Date",
+                    "axis": {"domain": false, "grid": false, "ticks": false}
+                },
+                "y": {
+                    "field": "sum_cumul_partial",
+                    "type": "quantitative",
+                    "title": "Number of Vaccination Doses Administered"
+                },
+                "opacity": {
+                    "value": 0.7
+                },
+                "color": {
+                    "value": "blue"
+                }
+            }
+        },
+        {
+            "transform": [
+                {
+                    "aggregate": [
+                        {
+                            "op": "sum",
+                            "field": "cumul_full",
+                            "as": "sum_cumul_full"
+                        }
+                    ],
+                    "groupby": ["date"]
+                }
+            ],
+            "mark": "area",
+            "encoding": {
+                "x": {
+                    "field": "date", 
+                    "type": "temporal", 
+                    "title": "Date"
+                },
+                "y": {
+                    "field": "sum_cumul_full",
+                    "type": "quantitative",
+                    "title": ""
+                },
+                "opacity": {
+                    "value": 0.8
+                },
+                "color": {
+                    "value": "pink"
+                }
+            }
+        },
+        {
+            "transform": [
+                {
+                    "aggregate": [
+                        {
+                            "op": "sum",
+                            "field": "cumul_booster",
+                            "as": "sum_cumul_booster"
+                        }
+                    ],
+                    "groupby": ["date"]
+                }
+            ],
+            "mark": "area",
+            "encoding": {
+                "x": {
+                    "field": "date", 
+                    "type": "temporal", 
+                    "title": "Date"
+                },
+                "y": {
+                    "field": "sum_cumul_booster",
+                    "type": "quantitative",
+                    "title": ""
+                },
+                "opacity": {
+                    "value": 0.5
+                },
+                "color": {
+                    "value": "yellow"
+                }
+            }
+        },
+        {
+            "mark": {
+            "type": "text",
+            "align": "left",
+            "baseline": "middle",
+            "dx": -12,
+            "font": "sans-serif",
+            "fontSize": 12,
+            "fontStyle": "italic"
+            },
+            "encoding": {
+                "text": {"value": "2 Weeks Interval Between 1st & 2nd Dose"},
+                "color": {"value": "black"},
+                "x": {"value": 25},
+                "y": {"datum": 18000000, "type": "quantitative"}
+            }
+        },
+        {
+            "mark": "rule",
+            "encoding": {
+                "x": {"value": 278},
+                "x2": {"value": 319},
+                "y": {"datum": 22000000},
+                "y2": {"datum": 22000000},
+                "color": {"value": "lime"}
+            }
+        },
+        {
+            "mark": "rule",
+            "encoding": {
+                "x": {"value": 261},
+                "x2": {"value": 298},
+                "y": {"datum": 20000000},
+                "y2": {"datum": 20000000},
+                "color": {"value": "lime"}
+            }
+        },
+        {
+            "mark": "rule",
+            "encoding": {
+                "x": {"value": 244},
+                "x2": {"value": 282},
+                "y": {"datum": 18000000},
+                "y2": {"datum": 18000000},
+                "color": {"value": "lime"}
+            }
+        },
+        {
+            "mark": "rule",
+            "encoding": {
+                "x": {"value": 230},
+                "x2": {"value": 267},
+                "y": {"datum": 16000000},
+                "y2": {"datum": 16000000},
+                "color": {"value": "lime"}
+            }
+        },
+        {
+            "mark": "rule",
+            "encoding": {
+                "x": {"value": 219},
+                "x2": {"value": 254},
+                "y": {"datum": 14000000},
+                "y2": {"datum": 14000000},
+                "color": {"value": "lime"}
+            }
+        },
+        {
+            "mark": "rule",
+            "encoding": {
+                "x": {"value": 210},
+                "x2": {"value": 246},
+                "y": {"datum": 12000000},
+                "y2": {"datum": 12000000},
+                "color": {"value": "lime"}
+            }
+        },
+        {
+            "mark": "rule",
+            "encoding": {
+                "x": {"value": 201},
+                "x2": {"value": 237},
+                "y": {"datum": 10000000},
+                "y2": {"datum": 10000000},
+                "color": {"value": "lime"}
+            }
+        },
+        {
+            "mark": "rule",
+            "encoding": {
+                "x": {"value": 191},
+                "x2": {"value": 226},
+                "y": {"datum": 8000000},
+                "y2": {"datum": 8000000},
+                "color": {"value": "lime"}
+            }
+        },
+        {
+            "mark": "rule",
+            "encoding": {
+                "x": {"value": 176},
+                "x2": {"value": 214},
+                "y": {"datum": 6000000},
+                "y2": {"datum": 6000000},
+                "color": {"value": "lime"}
+            }
+        },
+        {
+            "mark": "rule",
+            "encoding": {
+                "x": {"value": 159},
+                "x2": {"value": 195},
+                "y": {"datum": 4000000},
+                "y2": {"datum": 4000000},
+                "color": {"value": "lime"}
+            }
+        },
+        {
+            "data": {"url": "data/vaccination/vax_state_cleaned.csv"},
+            "mark": "rule",
+            "encoding": {
+                "x": {
+                    "field": "date", 
+                    "type": "temporal", 
+                    "title": "Date"
+                },
+                "opacity": {
+                    "condition": {"value": 0.5, "param": "hover", "empty": false},
+                    "value": 0
+                },
+                "tooltip": [
+                    {"field": "date", "type": "temporal", "title": "Date"},
+                    {"field": "cumul_partial", "type": "quantitative", "title": "1st Partial Dose Administered"},
+                    {"field": "cumul_full", "type": "quantitative", "title": "2nd Full Dose Administered"},
+                    {"field": "cumul_booster", "type": "quantitative", "title": "Booster Doses Administered"}
+                ]
+            },
+            "params": [
+                {
+                    "name": "hover",
+                    "select": {
+                        "type": "point",
+                        "fields": ["date"],
+                        "nearest": true,
+                        "on": "mouseover",
+                        "clear": "mouseout"
+                    }
+                }
+            ]
+        }
+    ]
+}
