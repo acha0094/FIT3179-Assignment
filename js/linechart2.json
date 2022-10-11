@@ -49,18 +49,19 @@
                 "x": {
                     "field": "date", 
                     "type": "temporal", 
-                    "title": ""
+                    "title": "Date"
                 },
                 "y": {
                     "field": "value",
                     "type": "quantitative",
-                    "title": "Daily Number of New Cases"
+                    "title": "Number of Vaccination Doses Administered"
                 },
                 "color": {
                     "field": "variable",
                     "type": "nominal",
+                    "scale": {"range": ["cyan", "black", "orange", "purple"]},
                     "legend": {
-                        "title": "States",
+                        "title": "Vaccination Dose",
                         "labelExpr": "{'cumul_partial': '1st Partial Dose', 'cumul_full': '2nd Full Dose', 'cumul_booster': '1st Booster Dose', 'cumul_booster2': '2nd Booster Dose'}[datum.label]"
                     }
                 }
