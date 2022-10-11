@@ -44,7 +44,6 @@
                 "name": "Year: "
             }
         }
-            
     ],
     "projection": {
         "type": "mercator",
@@ -73,6 +72,12 @@
             }
         },
         {
+            "params": [
+                {
+                    "name": "highlight",
+                    "select": {"type": "point", "on": "mouseover"}
+                }
+            ],
             "data": {
                 "url": "data/epidemic/total_cases_state.csv"
             },
@@ -109,7 +114,11 @@
                     {"field": "cases_new", "type": "quantitative", "title": "Total Cases"},
                     {"field": "population", "type": "quantitative", "title": "Population"},
                     {"field": "Cases per 10,000 Population", "type": "quantitative", "format": ".2f"}
-                ]
+                ],
+                "fillOpacity": {
+                    "condition": {"param": "highlight", "value": 1},
+                    "value": 0.25
+                }
             }
         }
     ]
