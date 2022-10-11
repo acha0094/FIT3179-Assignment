@@ -3,165 +3,68 @@
     "config": {
         "background": "rgb(253, 239, 223)"
     },
-    "data": {"url": "data/epidemic/cases_state.csv"},
-    "vconcat": [
+    "data": {"url": "data/vaccination/vax_state_cleaned2.csv"},
+    "width": 800,
+    "height": 400,
+    "encoding": {
+        "x": {
+            "field": "date", 
+            "type": "temporal", 
+            "title": ""
+        }
+    },
+    "layer": [
         {
-            "width": 800,
-            "height": 400,
+            "data": {"url": "data/vaccination/vax_state_cleaned.csv"},
+            "mark": "rule",
             "encoding": {
-                "x": {
-                    "field": "date", 
-                    "type": "temporal", 
-                    "title": "",
-                    "scale": {"domain": {"param": "brush"}}
-                }
+                "opacity": {
+                    "condition": {"value": 0.5, "param": "hover", "empty": false},
+                    "value": 0
+                },
+                "tooltip": [
+                    {"field": "date", "type": "temporal", "title": "Date"},
+                    {"field": "cumul_partial", "type": "quantitative", "title": "1st Partial Dose"},
+                    {"field": "cumul_full", "type": "quantitative", "title": "2nd Full Dose"},
+                    {"field": "cumul_booster", "type": "quantitative", "title": "1st Booster Dose"},
+                    {"field": "cumul_booster2", "type": "quantitative", "title": "2nd Booster Dose"}
+                ]
             },
-            "layer": [
+            "params": [
                 {
-                    "mark": {
-                        "type": "text",
-                        "align": "right",
-                        "baseline": "middle",
-                        "dx": -12,
-                        "font": "sans-serif",
-                        "fontSize": 12,
-                        "fontStyle": "italic"
-                    },
-                    "encoding": {
-                        "text": {"value": "Average Number of New Cases in Selangor: 1518"},
-                        "color": {"value": "black"},
-                        "x": {"value": 290},
-                        "y": {"datum": 1800, "type": "quantitative"}
+                    "name": "hover",
+                    "select": {
+                        "type": "point",
+                        "fields": ["date"],
+                        "nearest": true,
+                        "on": "mouseover",
+                        "clear": "mouseout"
                     }
-                },
-                {
-                    "mark": {
-                        "type": "text",
-                        "align": "center",
-                        "baseline": "middle",
-                        "dx": -12,
-                        "font": "sans-serif",
-                        "fontSize": 12,
-                        "fontStyle": "italic"
-                    },
-                    "encoding": {
-                        "text": {"value": ["Massive Spike in Cases Between", "July to November of 2021 &", "February to May 2022"]},
-                        "color": {"value": "black"},
-                        "x": {"value": 550},
-                        "y": {"datum": 10000, "type": "quantitative"}
-                    }
-                },
-                {
-                    "transform": [
-                        {
-                            "pivot": "state", 
-                            "value": "cases_new", 
-                            "groupby": ["date"]
-                        }
-                    ],
-                    "mark": "rule",
-                    "encoding": {
-                        "opacity": {
-                            "condition": {"value": 0.5, "param": "hover", "empty": false},
-                            "value": 0
-                        },
-                        "tooltip": [
-                            {"field": "date", "type": "temporal", "title": "Date"},
-                            {"field": "Johor", "type": "quantitative"},
-                            {"field": "Kedah", "type": "quantitative"},
-                            {"field": "Kelantan", "type": "quantitative"},
-                            {"field": "Melaka", "type": "quantitative"},
-                            {"field": "Negeri Sembilan", "type": "quantitative"},
-                            {"field": "Pahang", "type": "quantitative"},
-                            {"field": "Perak", "type": "quantitative"},
-                            {"field": "Perlis", "type": "quantitative"},
-                            {"field": "Pulau Pinang", "type": "quantitative"},
-                            {"field": "Sabah", "type": "quantitative"},
-                            {"field": "Sarawak", "type": "quantitative"},
-                            {"field": "Selangor", "type": "quantitative"},
-                            {"field": "Terengganu", "type": "quantitative"},
-                            {"field": "Kuala Lumpur", "type": "quantitative"},
-                            {"field": "Labuan", "type": "quantitative"},
-                            {"field": "Putrajaya", "type": "quantitative"}
-                        ]
-                    },
-                    "params": [
-                        {
-                            "name": "hover",
-                            "select": {
-                                "type": "point",
-                                "fields": ["date"],
-                                "nearest": true,
-                                "on": "mouseover",
-                                "clear": "mouseout"
-                            }
-                        }
-                    ]
-                },
-                {
-                    "mark": "line",
-                    "encoding": {
-                        "x": {
-                            "field": "date", 
-                            "type": "temporal", 
-                            "title": "",
-                            "scale": {"domain": {"param": "brush"}}
-                        },
-                        "y": {
-                            "field": "cases_new",
-                            "type": "quantitative",
-                            "title": "Daily Number of New Cases"
-                        },
-                        "color": {
-                            "field": "state",
-                            "type": "nominal",
-                            "legend": {
-                                "title": "States"
-                            }
-                        },
-                        "opacity": {
-                            "condition": {
-                                "param": "state_highlight",
-                                "value": 0.7
-                            },
-                            "value": 0.07
-                        },
-                        "tooltip": [
-                            {"field": "state", "type": "nominal", "title": "State"},
-                            {"field": "date", "type": "temporal", "title": "Date"},
-                            {"field": "cases_new", "type": "quantitative", "title": "Cases"}
-                        ]
-                    },
-                    "params": [
-                        {
-                            "name": "state_highlight",
-                            "select": {
-                                "type": "point",
-                                "fields": ["state"]
-                            },
-                            "bind": "legend"
-                        }
-                    ]
                 }
             ]
         },
         {
-            "width": 800,
-            "height": 40,
-            "mark": "area",
-            "params": [
-                {
-                    "name": "brush", 
-                    "select": {
-                        "type": "interval",
-                        "encodings": ["x"]
+            "mark": "line",
+            "encoding": {
+                "x": {
+                    "field": "date", 
+                    "type": "temporal", 
+                    "title": ""
+                },
+                "y": {
+                    "field": "value",
+                    "type": "quantitative",
+                    "title": "Daily Number of New Cases"
+                },
+                "color": {
+                    "field": "variable",
+                    "type": "nominal",
+                    "legend": {
+                        "title": "States",
+                        "labelExpr": "{'cumul_partial': '1st Partial Dose', 'cumul_full': '2nd Full Dose', 'cumul_booster': '1st Booster Dose', 'cumul_booster2': '2nd Booster Dose'}[datum.label]"
                     }
                 }
-            ],
-            "encoding": {
-                "x": {"field": "date", "type": "temporal", "title": "Date"}
             }
         }
-    ]
-    
+    ]    
 }
