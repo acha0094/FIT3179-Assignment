@@ -43,14 +43,6 @@
             </div>
         <div class="pure-g">
             <div class="pure-u-1-1">
-                <h2 class="title-text-box">Malaysia COVID-19 Daily Cases & Vaccinations</h2>
-                <div id="linechart3"></div>
-                <h3 class="text-box">
-                    In the line chart above, we can see the trend of vaccination doses being administered to the citizens of Malaysia. The <strong>1st and 2nd dose of the vaccine shows a similar trend</strong>, albeit spaced around <strong>three weeks apart</strong>. This is inline with the instruction of the Ministry of Health, to take the second dose only after 3 weeks have passed since taking the first dose. We can also observe that the <strong>first and second vaccine doses were administered</strong> during the period where the <strong>second largest wave of infection took place</strong> which suggests that, if the doses were administered <strong>at least two months earlier</strong>, the massive wave of infections could have been prevented. On the bright side, it can be deduced that the <strong>wave of infection ended as a result of</strong> the <strong>massive proactive effort</strong> to administer the first and second vaccine doses.
-                </h3>
-            </div>  
-        <div class="pure-g">
-            <div class="pure-u-1-1">
                 <h2 class="title-text-box">Malaysia COVID-19 Cumulative Vaccination Shots</h2>
                 <div id="areachart"></div>
                 <h3 class="text-box">
@@ -84,13 +76,6 @@
 
         var spec4 = "js/linechart2.json";
             vegaEmbed('#linechart2', spec4)
-            .then(function(result) {
-                // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
-            })
-            .catch(console.error);
-
-        var spec5 = "js/linechart3.json";
-            vegaEmbed('#linechart3', spec5)
             .then(function(result) {
                 // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
             })
