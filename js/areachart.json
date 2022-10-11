@@ -22,7 +22,7 @@
                     "title": "Number of Vaccination Doses Administered"
                 },
                 "opacity": {
-                    "value": 1
+                    "value": 0.6
                 },
                 "color": {
                     "field": "variable", 
