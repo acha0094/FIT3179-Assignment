@@ -44,6 +44,23 @@
             ]
         },
         {
+            "mark": {
+            "type": "text",
+            "align": "left",
+            "baseline": "middle",
+            "dx": -12,
+            "font": "sans-serif",
+            "fontSize": 12,
+            "fontStyle": "italic"
+            },
+            "encoding": {
+                "text": {"value": "2 Weeks Interval Between 1st & 2nd Dose"},
+                "color": {"value": "black"},
+                "x": {"value": 22},
+                "y": {"datum": 18000000, "type": "quantitative"}
+            }
+        },
+        {
             "mark": "rule",
             "encoding": {
                 "x": {"value": 278},
