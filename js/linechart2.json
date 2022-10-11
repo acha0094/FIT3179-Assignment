@@ -44,6 +44,106 @@
             ]
         },
         {
+            "mark": "rule",
+            "encoding": {
+                "x": {"value": 278},
+                "x2": {"value": 319},
+                "y": {"datum": 22000000},
+                "y2": {"datum": 22000000},
+                "color": {"value": "red"}
+            }
+        },
+        {
+            "mark": "rule",
+            "encoding": {
+                "x": {"value": 261},
+                "x2": {"value": 298},
+                "y": {"datum": 20000000},
+                "y2": {"datum": 20000000},
+                "color": {"value": "red"}
+            }
+        },
+        {
+            "mark": "rule",
+            "encoding": {
+                "x": {"value": 244},
+                "x2": {"value": 282},
+                "y": {"datum": 18000000},
+                "y2": {"datum": 18000000},
+                "color": {"value": "red"}
+            }
+        },
+        {
+            "mark": "rule",
+            "encoding": {
+                "x": {"value": 230},
+                "x2": {"value": 267},
+                "y": {"datum": 16000000},
+                "y2": {"datum": 16000000},
+                "color": {"value": "red"}
+            }
+        },
+        {
+            "mark": "rule",
+            "encoding": {
+                "x": {"value": 219},
+                "x2": {"value": 254},
+                "y": {"datum": 14000000},
+                "y2": {"datum": 14000000},
+                "color": {"value": "red"}
+            }
+        },
+        {
+            "mark": "rule",
+            "encoding": {
+                "x": {"value": 210},
+                "x2": {"value": 246},
+                "y": {"datum": 12000000},
+                "y2": {"datum": 12000000},
+                "color": {"value": "red"}
+            }
+        },
+        {
+            "mark": "rule",
+            "encoding": {
+                "x": {"value": 201},
+                "x2": {"value": 237},
+                "y": {"datum": 10000000},
+                "y2": {"datum": 10000000},
+                "color": {"value": "red"}
+            }
+        },
+        {
+            "mark": "rule",
+            "encoding": {
+                "x": {"value": 191},
+                "x2": {"value": 226},
+                "y": {"datum": 8000000},
+                "y2": {"datum": 8000000},
+                "color": {"value": "red"}
+            }
+        },
+        {
+            "mark": "rule",
+            "encoding": {
+                "x": {"value": 176},
+                "x2": {"value": 214},
+                "y": {"datum": 6000000},
+                "y2": {"datum": 6000000},
+                "color": {"value": "red"}
+            }
+        },
+        {
+            "mark": "rule",
+            "encoding": {
+                "x": {"value": 159},
+                "x2": {"value": 195},
+                "y": {"datum": 4000000},
+                "y2": {"datum": 4000000},
+                "color": {"value": "red"}
+            }
+        },
+        {
             "mark": "line",
             "encoding": {
                 "x": {
