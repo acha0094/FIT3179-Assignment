@@ -34,12 +34,12 @@
                     "title": "Number of Vaccination Doses Administered"
                 },
                 "opacity": {
-                    "value": 0.6
+                    "value": 1
                 },
                 "color": {
                     "datum": "1st Partial Dose", 
                     "type": "nominal", 
-                    "scale": {"range": ["pink", "orange", "blue"]},
+                    "scale": {"range": ["pink", "orange", "purple"]},
                     "legend": {
                         "title": "Vaccination Dose"
                     }
@@ -72,7 +72,7 @@
                     "title": ""
                 },
                 "opacity": {
-                    "value": 0.4
+                    "value": 1
                 },
                 "color": {"datum": "2nd Full Dose", "type": "nominal"}
             }
@@ -103,7 +103,7 @@
                     "title": ""
                 },
                 "opacity": {
-                    "value": 0.5
+                    "value": 1
                 },
                 "color": {"datum": "Booster Dose", "type": "nominal"}
             }
