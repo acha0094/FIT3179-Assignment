@@ -5,21 +5,9 @@
     "config": {
         "background": "rgb(253, 239, 223)"
     },
-    "data": {"url": "data/vaccination/vax_state.csv"},
     "layer": [
         {
-            "transform": [
-                {
-                    "aggregate": [
-                        {
-                            "op": "sum",
-                            "field": "cumul_partial",
-                            "as": "Partial Doses"
-                        }
-                    ],
-                    "groupby": ["date"]
-                }
-            ],
+            "data": {"url": "data/vaccination/vax_state_cleaned2.csv"},
             "mark": "area",
             "encoding": {
                 "x": {
@@ -29,7 +17,7 @@
                     "axis": {"domain": false, "grid": false, "ticks": false}
                 },
                 "y": {
-                    "field": "Partial Doses",
+                    "field": "value",
                     "type": "quantitative",
                     "title": "Number of Vaccination Doses Administered"
                 },
@@ -37,192 +25,14 @@
                     "value": 1
                 },
                 "color": {
-                    "datum": "1st Partial Dose", 
+                    "field": "variable", 
                     "type": "nominal", 
-                    "scale": {"range": ["pink", "orange", "purple"]},
+                    "scale": {"range": ["cyan", "orange", "purple"]},
                     "legend": {
-                        "title": "Vaccination Dose"
+                        "title": "Vaccination Dose",
+                        "labelExpr": "{'cumul_partial': '1st Partial Dose', 'cumul_full': '2nd Full Dose', 'cumul_booster': 'Booster Dose'}[datum.label]"
                     }
                 }
-            }
-        },
-        {
-            "transform": [
-                {
-                    "aggregate": [
-                        {
-                            "op": "sum",
-                            "field": "cumul_full",
-                            "as": "2nd Full Dose"
-                        }
-                    ],
-                    "groupby": ["date"]
-                }
-            ],
-            "mark": "area",
-            "encoding": {
-                "x": {
-                    "field": "date", 
-                    "type": "temporal", 
-                    "title": "Date"
-                },
-                "y": {
-                    "field": "2nd Full Dose",
-                    "type": "quantitative",
-                    "title": ""
-                },
-                "opacity": {
-                    "value": 1
-                },
-                "color": {"datum": "2nd Full Dose", "type": "nominal"}
-            }
-        },
-        {
-            "transform": [
-                {
-                    "aggregate": [
-                        {
-                            "op": "sum",
-                            "field": "cumul_booster",
-                            "as": "Booster Dose"
-                        }
-                    ],
-                    "groupby": ["date"]
-                }
-            ],
-            "mark": "area",
-            "encoding": {
-                "x": {
-                    "field": "date", 
-                    "type": "temporal", 
-                    "title": "Date"
-                },
-                "y": {
-                    "field": "Booster Dose",
-                    "type": "quantitative",
-                    "title": ""
-                },
-                "opacity": {
-                    "value": 1
-                },
-                "color": {"datum": "Booster Dose", "type": "nominal"}
-            }
-        },
-        {
-            "mark": {
-            "type": "text",
-            "align": "left",
-            "baseline": "middle",
-            "dx": -12,
-            "font": "sans-serif",
-            "fontSize": 12,
-            "fontStyle": "italic"
-            },
-            "encoding": {
-                "text": {"value": "2 Weeks Interval Between 1st & 2nd Dose"},
-                "color": {"value": "black"},
-                "x": {"value": 20},
-                "y": {"datum": 17000000, "type": "quantitative"}
-            }
-        },
-        {
-            "mark": "rule",
-            "encoding": {
-                "x": {"value": 279},
-                "x2": {"value": 319},
-                "y": {"datum": 22000000},
-                "y2": {"datum": 22000000},
-                "color": {"value": "lime"}
-            }
-        },
-        {
-            "mark": "rule",
-            "encoding": {
-                "x": {"value": 261},
-                "x2": {"value": 298},
-                "y": {"datum": 20000000},
-                "y2": {"datum": 20000000},
-                "color": {"value": "lime"}
-            }
-        },
-        {
-            "mark": "rule",
-            "encoding": {
-                "x": {"value": 244},
-                "x2": {"value": 282},
-                "y": {"datum": 18000000},
-                "y2": {"datum": 18000000},
-                "color": {"value": "lime"}
-            }
-        },
-        {
-            "mark": "rule",
-            "encoding": {
-                "x": {"value": 230},
-                "x2": {"value": 267},
-                "y": {"datum": 16000000},
-                "y2": {"datum": 16000000},
-                "color": {"value": "lime"}
-            }
-        },
-        {
-            "mark": "rule",
-            "encoding": {
-                "x": {"value": 219},
-                "x2": {"value": 254},
-                "y": {"datum": 14000000},
-                "y2": {"datum": 14000000},
-                "color": {"value": "lime"}
-            }
-        },
-        {
-            "mark": "rule",
-            "encoding": {
-                "x": {"value": 210},
-                "x2": {"value": 246},
-                "y": {"datum": 12000000},
-                "y2": {"datum": 12000000},
-                "color": {"value": "lime"}
-            }
-        },
-        {
-            "mark": "rule",
-            "encoding": {
-                "x": {"value": 201},
-                "x2": {"value": 237},
-                "y": {"datum": 10000000},
-                "y2": {"datum": 10000000},
-                "color": {"value": "lime"}
-            }
-        },
-        {
-            "mark": "rule",
-            "encoding": {
-                "x": {"value": 191},
-                "x2": {"value": 226},
-                "y": {"datum": 8000000},
-                "y2": {"datum": 8000000},
-                "color": {"value": "lime"}
-            }
-        },
-        {
-            "mark": "rule",
-            "encoding": {
-                "x": {"value": 176},
-                "x2": {"value": 214},
-                "y": {"datum": 6000000},
-                "y2": {"datum": 6000000},
-                "color": {"value": "lime"}
-            }
-        },
-        {
-            "mark": "rule",
-            "encoding": {
-                "x": {"value": 159},
-                "x2": {"value": 195},
-                "y": {"datum": 4000000},
-                "y2": {"datum": 4000000},
-                "color": {"value": "lime"}
             }
         },
         {
