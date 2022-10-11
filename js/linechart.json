@@ -18,6 +18,7 @@
             },
             "layer": [
                 {
+                    "data": {"values": [{}]},
                     "mark": {
                         "type": "text",
                         "align": "right",
@@ -35,6 +36,7 @@
                     }
                 },
                 {
+                    "data": {"values": [{}]},
                     "mark": {
                         "type": "text",
                         "align": "center",
@@ -45,7 +47,7 @@
                         "fontStyle": "italic"
                     },
                     "encoding": {
-                        "text": {"value": ["Massive Spike in Cases Between", "July to November of 2021 &", "February to May 2022"]},
+                        "text": {"value": ["Massive Spike in Cases Between", "July to November of 2021 &", "February to May of 2022"]},
                         "color": {"value": "black"},
                         "x": {"value": 550},
                         "y": {"datum": 10000, "type": "quantitative"}

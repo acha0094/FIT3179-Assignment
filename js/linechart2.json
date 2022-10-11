@@ -16,6 +16,42 @@
             },
             "layer": [
                 {
+                    "data": {"values": [{}]},
+                    "mark": {
+                    "type": "text",
+                    "align": "center",
+                    "baseline": "middle",
+                    "dx": -12,
+                    "font": "sans-serif",
+                    "fontSize": 12,
+                    "fontStyle": "italic"
+                    },
+                    "encoding": {
+                        "text": {"value": ["3 Weeks Interval","Between 1st & 2nd Dose", "Can Be Observed"]},
+                        "color": {"value": "black"},
+                        "x": {"value": 130},
+                        "y": {"datum": 350000, "type": "quantitative"}
+                    }
+                },
+                {
+                    "data": {"values": [{}]},
+                    "mark": {
+                    "type": "text",
+                    "align": "center",
+                    "baseline": "middle",
+                    "dx": -12,
+                    "font": "sans-serif",
+                    "fontSize": 12,
+                    "fontStyle": "italic"
+                    },
+                    "encoding": {
+                        "text": {"value": ["Booster Dose Administered","After Most of the Population", "Have Received Their Full Dose"]},
+                        "color": {"value": "black"},
+                        "x": {"value": 470},
+                        "y": {"datum": 320000, "type": "quantitative"}
+                    }
+                },
+                {
                     "data": {"url": "data/vaccination/vax_state_cleaned3.csv"},
                     "mark": "rule",
                     "encoding": {
