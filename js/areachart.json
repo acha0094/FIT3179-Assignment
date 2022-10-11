@@ -27,12 +27,13 @@
                 "color": {
                     "field": "variable", 
                     "type": "nominal", 
-                    "scale": {"range": ["cyan", "orange", "purple"]},
+                    "scale": {"range": ["cyan", "black", "orange", "purple"]},
                     "legend": {
                         "title": "Vaccination Dose",
-                        "labelExpr": "{'cumul_partial': '1st Partial Dose', 'cumul_full': '2nd Full Dose', 'cumul_booster': 'Booster Dose'}[datum.label]"
+                        "labelExpr": "{'cumul_partial': '1st Partial Dose', 'cumul_full': '2nd Full Dose', 'cumul_booster': '1st Booster Dose', 'cumul_booster2': '2nd Booster Dose'}[datum.label]"
                     }
-                }
+                },
+                "order": {"sort": "ascending"}
             }
         },
         {
