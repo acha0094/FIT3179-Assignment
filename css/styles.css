@@ -1,15 +1,16 @@
 #choropleth_map {
-    left: 35px;
-	margin-bottom: 50px;
+    left: 65px;
+	margin-bottom: 10px;
 }
 
 #linechart {
-    right: 15px;
-	margin-bottom: 50px;
+    left: 5px;
+	margin-bottom: 10px;
 }
 
 #areachart {
-    right: 32px;
+    left: 5px;
+	margin-bottom: 10px;
 }
 
 body *{
@@ -28,12 +29,19 @@ h2 {
     text-align: center;
 }
 
+h3 {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 50;
+    font-size: 1em;
+    text-align: left;
+}
+
 body {
     background-color: rgb(105, 91, 91);
 }
 
 .page {
-    width: 950px;
+    width: 1000px;
     background-color: rgb(253, 239, 223);
     margin: auto;
     padding: 50px;
@@ -68,12 +76,12 @@ body {
     background-color: rgb(255, 227, 196);
     padding-top: 10px;
     padding-bottom: 10px;
-    padding-left: 90px;
-    padding-right: 60px;
+    padding-left: 10px;
+    padding-right: 10px;
     border-style: solid;
-    border-width: 5px;
+    border-width: 3px;
     border-color: rgb(255, 206, 151);
-    text-align: center;
+    text-align: left;
 }
 
 .description h2,
