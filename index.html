@@ -54,28 +54,28 @@
 
     <script>
         var spec = "js/map.json";
-            vegaEmbed('#choropleth_map', spec)
+            vegaEmbed('#choropleth_map', spec, {actions: false})
             .then(function(result) {
                 // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
             })
             .catch(console.error);
 
         var spec2 = "js/linechart.json";
-            vegaEmbed('#linechart', spec2)
+            vegaEmbed('#linechart', spec2, {actions: false})
             .then(function(result) {
                 // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
             })
             .catch(console.error);
 
         var spec3 = "js/areachart.json";
-            vegaEmbed('#areachart', spec3)
+            vegaEmbed('#areachart', spec3, {actions: false})
             .then(function(result) {
                 // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
             })
             .catch(console.error);
 
         var spec4 = "js/linechart2.json";
-            vegaEmbed('#linechart2', spec4)
+            vegaEmbed('#linechart2', spec4, {actions: false})
             .then(function(result) {
                 // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
             })
