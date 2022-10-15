@@ -37,6 +37,35 @@
             }
         },
         {
+            "data": {"values": [{}]},
+            "mark": {
+                "type": "rule",
+                "strokeDash": [8, 4]
+        },
+            "encoding": {
+                "color": {"value": "black"},
+                "y": {"datum": 72000000, "type": "quantitative"}
+            }
+        },
+        {
+            "data": {"values": [{}]},
+            "mark": {
+                "type": "text",
+                "align": "center",
+                "baseline": "middle",
+                "dx": -12,
+                "font": "sans-serif",
+                "fontSize": 12,
+                "fontStyle": "italic"
+            },
+            "encoding": {
+                "text": {"value": ["72 million Doses"]},
+                "color": {"value": "black"},
+                "x": {"value": 600},
+                "y": {"datum": 74000000, "type": "quantitative"}
+            }
+        },
+        {
             "data": {"url": "data/vaccination/vax_state_cleaned.csv"},
             "mark": "rule",
             "encoding": {
