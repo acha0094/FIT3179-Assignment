@@ -41,6 +41,13 @@ h3 {
     text-align: left;
 }
 
+h4 {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 50;
+    font-size: 0.8em;
+    text-align: right;
+}
+
 body {
     background-color: rgb(105, 91, 91);
 }
@@ -87,6 +94,10 @@ body {
     border-width: 3px;
     border-color: rgb(255, 206, 151);
     text-align: left;
+}
+
+footer {
+    text-align: right;
 }
 
 .description h2,
