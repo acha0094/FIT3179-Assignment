@@ -54,6 +54,24 @@
                     }
                 },
                 {
+                    "data": {"values": [{}]},
+                    "mark": {
+                        "type": "text",
+                        "align": "center",
+                        "baseline": "middle",
+                        "dx": -12,
+                        "font": "sans-serif",
+                        "fontSize": 12,
+                        "fontStyle": "italic"
+                    },
+                    "encoding": {
+                        "text": {"value": ["Selangor and", "Kuala Lumpur", "had higher than", "average cases"]},
+                        "color": {"value": "black"},
+                        "x": {"value": 765},
+                        "y": {"datum": 4000, "type": "quantitative"}
+                    }
+                },
+                {
                     "transform": [
                         {
                             "pivot": "state", 
