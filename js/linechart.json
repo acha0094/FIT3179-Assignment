@@ -137,6 +137,9 @@
                             "type": "nominal",
                             "legend": {
                                 "title": "States"
+                            },
+                            "scale": {
+                                "scheme": "dark2"
                             }
                         },
                         "opacity": {
